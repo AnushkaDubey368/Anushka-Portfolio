@@ -1,16 +1,87 @@
-# React + Vite
+# 🚀 Anushka Kumari | Software Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, responsive, and visually stunning developer portfolio built with **React**, **Vite**, and **Vanilla CSS**. Features an interactive tech vector background animation, glassmorphism UI components, dynamic skill badges, functional contact integration, and an interactive Lightbox modal for licenses and certifications.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Key Features
 
-## React Compiler
+- **🌐 Interactive Constellation Vector Background**: Fullscreen animated particle network with interactive mouse magnetic physics and glowing nodes built using HTML5 Canvas.
+- **👩‍💻 Hero Section with Orbiting Tech Badges**: Dual spinning orbital glow rings featuring interactive glassmorphism tech badges (Python, JavaScript, React, C++, Google Cloud, Git) surrounding a centered profile avatar.
+- **🛠️ Technical Arsenal (Skills & Competencies)**: Categorized showcase with distinct Lucide icons for programming languages, tools, platforms, and professional competencies.
+- **📜 Licenses & Certifications Lightbox**: Clickable credential cards that open a centered Lightbox viewer showcasing official certificates (DigiCoders Python Training, Infosys Springboard AI, Lenovo Cybersecurity, Wadhwani Employability, and 4 Google Cloud Skills Arcade Awards).
+- **📬 Functional Contact Form**: Validated contact section with state management, error/success alert banners, direct email dispatch (`mailto:`), and quick-connect info cards.
+- **🔝 Scroll-to-Top Floating Action Button**: Smart FAB in the bottom right corner that smoothly fades in when scrolled past 30% of the page height.
+- **🎨 Dynamic Theme & Contrast Controls**: Instant dark/light mode toggle and high-contrast accessibility mode.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- **Core**: React 19, JavaScript (ES6+), HTML5
+- **Styling**: Vanilla CSS3 (Custom Design System, Glassmorphism, CSS Animations)
+- **Icons & Graphics**: Lucide React, React Icons, Canvas 2D API
+- **Build Tool**: Vite 8
+- **Linter**: Oxlint
+
+---
+
+## 🚀 Getting Started Locally
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) (v20+ or v22+) installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:AnushkaDubey368/Anushka-Portfolio.git
+   cd Anushka-Portfolio
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the local development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:5173` (or the port specified in your terminal output).
+
+---
+
+## 📂 Project Structure
+
+```text
+anushka-portfolio/
+├── public/
+│   ├── favicon.svg
+│   └── images/              # Certificate documents, GCP badges & profile DP
+├── src/
+│   ├── assets/              # SVG icons & local static assets
+│   ├── components/
+│   │   ├── About.jsx / .css
+│   │   ├── BackgroundVisualizer.jsx / .css   # Canvas vector network
+│   │   ├── Certificates.jsx / .css           # Licenses & Lightbox modal
+│   │   ├── Contact.jsx / .css                # Functional form
+│   │   ├── Experience.jsx / .css
+│   │   ├── Hero.jsx / .css                   # Orbital avatar hero
+│   │   ├── Navbar.jsx / .css                 # Glassmorphic navbar
+│   │   ├── Projects.jsx / .css
+│   │   ├── ScrollToTop.jsx / .css            # Floating action button
+│   │   └── Skills.jsx / .css                 # Technical arsenal grid
+│   ├── App.jsx              # Application root
+│   ├── index.css            # Design tokens & core styles
+│   └── main.jsx
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## 📄 License
+
+Created by **Anushka Kumari**. All rights reserved.
