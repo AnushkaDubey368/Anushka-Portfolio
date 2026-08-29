@@ -1,0 +1,46 @@
+.scroll-to-top-fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent-primary, #ff6b00);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(255, 107, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.8);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-to-top-fab.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.scroll-to-top-fab:hover {
+  background: var(--accent-secondary, #cc5500);
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 12px 28px rgba(255, 107, 0, 0.45);
+}
+
+.scroll-to-top-fab:active {
+  transform: translateY(-1px) scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .scroll-to-top-fab {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
+}

@@ -1,0 +1,26 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Temporary / Local binaries
+node-v22.14.0-linux-x64/
+node-v20.18.0-linux-x64/
+.node_lib/
+
+# Production build
+dist/
+dist-ssr/
+*.local
+
+# Editor directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
