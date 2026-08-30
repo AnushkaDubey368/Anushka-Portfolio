@@ -1,13 +1,13 @@
-import { FileText, Download, ExternalLink, Eye, X } from 'lucide-react'
+import { FileText, Download, Eye, X } from 'lucide-react'
 import { useState } from 'react'
 import './PdfViewer.css'
 
 export default function PdfViewer() {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false)
-  const pdfUrl = '/portfolio.pdf'
+  const resumeUrl = '/resume.pdf'
 
   return (
-    <section id="portfolio-pdf" className="pdf-section">
+    <section id="cv-resume" className="pdf-section">
       <div className="container">
         <div className="pdf-card">
           <div className="pdf-info">
@@ -15,9 +15,9 @@ export default function PdfViewer() {
               <FileText size={32} className="pdf-icon" />
             </div>
             <div className="pdf-text">
-              <h3 className="pdf-title">Official Portfolio Document (PDF)</h3>
+              <h3 className="pdf-title">Curriculum Vitae / Resume (CV)</h3>
               <p className="pdf-description">
-                View or download Anushka Kumari's complete technical portfolio resume & credentials document.
+                View or download Anushka Kumari's official CV resume document.
               </p>
             </div>
           </div>
@@ -28,37 +28,37 @@ export default function PdfViewer() {
               onClick={() => setIsPreviewOpen(true)}
             >
               <Eye size={18} />
-              <span>Preview PDF</span>
+              <span>Preview CV</span>
             </button>
 
             <a 
-              href={pdfUrl} 
-              download="Anushka_Kumari_Portfolio.pdf" 
+              href={resumeUrl} 
+              download="Anushka_Kumari_CV.pdf" 
               className="btn btn-primary pdf-btn"
             >
               <Download size={18} />
-              <span>Download PDF</span>
+              <span>Download CV</span>
             </a>
           </div>
         </div>
       </div>
 
-      {/* Fullscreen PDF Modal Preview */}
+      {/* Fullscreen CV PDF Modal Preview */}
       {isPreviewOpen && (
         <div className="pdf-modal-overlay" onClick={() => setIsPreviewOpen(false)}>
           <div className="pdf-modal-container" onClick={(e) => e.stopPropagation()}>
             <div className="pdf-modal-header">
               <div className="pdf-modal-header-left">
                 <FileText size={20} className="text-accent" />
-                <span>Anushka Kumari - Portfolio Document Preview</span>
+                <span>Anushka Kumari - Curriculum Vitae (CV) Preview</span>
               </div>
               <div className="pdf-modal-header-right">
                 <a 
-                  href={pdfUrl} 
-                  download="Anushka_Kumari_Portfolio.pdf"
+                  href={resumeUrl} 
+                  download="Anushka_Kumari_CV.pdf"
                   className="btn btn-primary btn-sm"
                 >
-                  <Download size={14} /> Download
+                  <Download size={14} /> Download CV
                 </a>
                 <button 
                   className="pdf-modal-close" 
@@ -72,8 +72,8 @@ export default function PdfViewer() {
 
             <div className="pdf-modal-body">
               <iframe 
-                src={`${pdfUrl}#toolbar=1&navpanes=0&scrollbar=1`}
-                title="Portfolio PDF Preview"
+                src={`${resumeUrl}#toolbar=1&navpanes=0&scrollbar=1`}
+                title="Curriculum Vitae Preview"
                 className="pdf-iframe"
               />
             </div>

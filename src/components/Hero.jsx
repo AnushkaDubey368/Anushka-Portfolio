@@ -42,6 +42,9 @@ export default function Hero() {
                 <span>View Projects</span>
                 <ArrowRight size={18} />
               </a>
+              <a href="#cv-resume" className="btn btn-secondary hero-btn">
+                <span>View CV / Resume</span>
+              </a>
               <a href="#contact" className="btn btn-secondary hero-btn">
                 <span>Contact Me</span>
                 <Send size={18} />
