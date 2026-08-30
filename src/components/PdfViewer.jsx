@@ -1,10 +1,12 @@
-import { FileText, Download, Eye, X } from 'lucide-react'
+import { FileText, Download, ExternalLink, Eye, X } from 'lucide-react'
 import { useState } from 'react'
 import './PdfViewer.css'
 
 export default function PdfViewer() {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false)
-  const resumeUrl = '/resume.pdf'
+  const driveViewUrl = 'https://drive.google.com/file/d/1eSvX8JrhyW-aLl9NIuduTzD1-5NtXj3k/view?usp=sharing'
+  const driveEmbedUrl = 'https://drive.google.com/file/d/1eSvX8JrhyW-aLl9NIuduTzD1-5NtXj3k/preview'
+  const driveDownloadUrl = 'https://drive.google.com/uc?export=download&id=1eSvX8JrhyW-aLl9NIuduTzD1-5NtXj3k'
 
   return (
     <section id="cv-resume" className="pdf-section">
@@ -32,8 +34,9 @@ export default function PdfViewer() {
             </button>
 
             <a 
-              href={resumeUrl} 
-              download="Anushka_Kumari_CV.pdf" 
+              href={driveDownloadUrl} 
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-primary pdf-btn"
             >
               <Download size={18} />
@@ -54,8 +57,17 @@ export default function PdfViewer() {
               </div>
               <div className="pdf-modal-header-right">
                 <a 
-                  href={resumeUrl} 
-                  download="Anushka_Kumari_CV.pdf"
+                  href={driveViewUrl} 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-secondary btn-sm"
+                >
+                  <ExternalLink size={14} /> Open in Drive
+                </a>
+                <a 
+                  href={driveDownloadUrl} 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn btn-primary btn-sm"
                 >
                   <Download size={14} /> Download CV
@@ -72,9 +84,10 @@ export default function PdfViewer() {
 
             <div className="pdf-modal-body">
               <iframe 
-                src={`${resumeUrl}#toolbar=1&navpanes=0&scrollbar=1`}
+                src={driveEmbedUrl}
                 title="Curriculum Vitae Preview"
                 className="pdf-iframe"
+                allow="autoplay"
               />
             </div>
           </div>
