@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import PdfViewer from './components/PdfViewer'
 import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
@@ -48,6 +49,7 @@ function App() {
       />
       <main>
         <Hero />
+        <PdfViewer />
         <About />
         <Skills />
         <Projects />
